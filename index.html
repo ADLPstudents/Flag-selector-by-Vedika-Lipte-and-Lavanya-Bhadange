@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Country Selector</title>
+<style>
+body {
+background-color: lightblue;
+margin: 20px;
+text-align: center;
+}
+
+img {
+width: 400px;
+margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Country Flag Selector</h1>
+
+<div>
+<select onchange="showFlag()">
+<option>Choose country</option>
+<option value="usa">United States</option>
+<option value="uk">United Kingdom</option>
+<option value="india">India</option>
+<option value="japan">Japan</option>
+<option value="france">France</option>
+<option value="germany">Germany</option>
+<option value="canada">Canada</option>
+<option value="australia">Australia</option>
+<option value="brazil">Brazil</option>
+<option value="china">China</option>
+</select>
+</div>
+
+<div>
+<p>Select country to see flag</p>
+</div>
+
+<div>
+    <p>Developed by Vedika Lipte and Lavanya Bhadange</p>
+</div>
+
+<script>
+function showFlag() {
+var selectBox = document.getElementsByTagName('select')[0];
+var country = selectBox.value;
+var para = document.getElementsByTagName('p')[0];
+
+if(country == "usa") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/us.png'><br>United States";
+}
+else if(country == "uk") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/gb.png'><br>United Kingdom";
+}
+else if(country == "india") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/in.png'><br>India";
+}
+else if(country == "japan") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/jp.png'><br>Japan";
+}
+else if(country == "france") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/fr.png'><br>France";
+}
+else if(country == "germany") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/de.png'><br>Germany";
+}
+else if(country == "canada") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/ca.png'><br>Canada";
+}
+else if(country == "australia") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/au.png'><br>Australia";
+}
+else if(country == "brazil") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/br.png'><br>Brazil";
+}
+else if(country == "china") {
+para.innerHTML = "<img src='https://flagcdn.com/w320/cn.png'><br>China";
+}
+else {
+para.innerHTML = "Select country to see flag";
+}
+}
+</script>
+
+
+</body>
+</html>
+
